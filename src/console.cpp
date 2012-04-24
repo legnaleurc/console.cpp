@@ -1,13 +1,14 @@
 #include "console_p.hpp"
-#include "buffer.hpp"
 
-Console::Private::Private() {
+Console::Private::Private():
+buffer( new Buffer( std::cin.rdbuf(), std::cout.rdbuf() ) ) {
 }
 
 Console::Console():
-std::iostream( new Buffer( std::cin.rdbuf(), std::cout.rdbuf() ) ) {
+std::iostream( nullptr ),
+p_( new Private ) {
+  this->rdbuf( this->p_->buffer.get() );
 }
 
 Console::~Console() {
-  delete this->rdbuf();
 }
