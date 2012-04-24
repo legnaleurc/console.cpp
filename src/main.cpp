@@ -1,8 +1,7 @@
 #include "console.hpp"
-#include "operators.hpp"
 
 int main() {
-  Console console;
+  console::Console console;
   int i;
   console << "input a integer: " >> i << "i is " << i << std::endl;
   double d;

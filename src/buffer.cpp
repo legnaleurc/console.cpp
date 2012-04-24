@@ -1,5 +1,7 @@
 #include "buffer.hpp"
 
+using console::Buffer;
+
 Buffer::Buffer( std::streambuf * in, std::streambuf * out ): std::streambuf(), in_( in ), out_( out ) {
 }
 

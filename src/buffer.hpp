@@ -1,7 +1,9 @@
-#ifndef BUFFER_HPP
-#define BUFFER_HPP
+#ifndef CONSOLE_BUFFER_HPP
+#define CONSOLE_BUFFER_HPP
 
 #include <streambuf>
+
+namespace console {
 
 class Buffer : public std::streambuf {
 public:
@@ -24,5 +26,7 @@ private:
   std::streambuf * in_;
   std::streambuf * out_;
 };
+
+}
 
 #endif

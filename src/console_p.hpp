@@ -4,11 +4,15 @@
 #include "console.hpp"
 #include "buffer.hpp"
 
+namespace console {
+
 class Console::Private {
 public:
   Private();
 
   std::unique_ptr< Buffer > buffer;
 };
+
+}
 
 #endif
