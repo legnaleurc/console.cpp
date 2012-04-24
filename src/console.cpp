@@ -9,5 +9,5 @@ std::iostream( new Buffer( std::cin.rdbuf(), std::cout.rdbuf() ) ) {
 }
 
 Console::~Console() {
-	delete this->rdbuf();
+  delete this->rdbuf();
 }

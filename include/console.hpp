@@ -6,14 +6,14 @@
 
 class Console : public std::iostream {
 public:
-	Console();
-	virtual ~Console();
+  Console();
+  virtual ~Console();
 
 private:
-	Console( const Console & );
-	Console & operator =( const Console & );
-	class Private;
-	std::unique_ptr< Private > p_;
+  Console( const Console & );
+  Console & operator =( const Console & );
+  class Private;
+  std::unique_ptr< Private > p_;
 };
 
 #endif

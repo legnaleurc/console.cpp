@@ -5,7 +5,7 @@
 
 class Console::Private {
 public:
-	Private();
+  Private();
 };
 
 #endif
